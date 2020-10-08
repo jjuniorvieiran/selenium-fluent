@@ -27,7 +27,7 @@ public class BaseTestClass {
 
     @BeforeMethod
     public void goToHome(){
-        driver.get("file:///C:/website/HomePage.html");
+        driver.get("file:///Users/josejunior/dev/git/selenium-java-fluent-interface-pluralsights/automated-tests-in-java-with-fluent-interface-using-webdriver-selenium-exercise-files/website/HomePage.html");
     }
 
     @AfterSuite(alwaysRun = true)

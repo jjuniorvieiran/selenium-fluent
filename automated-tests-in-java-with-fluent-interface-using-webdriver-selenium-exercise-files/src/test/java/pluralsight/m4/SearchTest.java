@@ -22,8 +22,8 @@ public class SearchTest extends BaseTestClass {
                 .selectTabCourse()
                 .selectCourse("Java Fundamentals: The Java Language");
 
-       course.verifyCoursePreviewIsDisplayed()
-               .verifyFreeTrialIsDisplayed();
+        course.verifyCoursePreviewIsDisplayed() //we have here some fluently already
+                .verifyFreeTrialIsDisplayed();
 
     }
 
