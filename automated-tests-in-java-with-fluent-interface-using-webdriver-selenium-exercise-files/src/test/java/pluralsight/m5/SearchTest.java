@@ -37,7 +37,7 @@ public class SearchTest extends BaseTestClass {
 
        // OR
 
-       common.verifyIsDisplayed(freeTrialButton())
+       common.verifyIsDisplayed(freeTrialButton()) // we are passing here the button as a parameter. the code is not repeated.
                .verifyIsDisplayed(coursePreviewButton());
 
     }
