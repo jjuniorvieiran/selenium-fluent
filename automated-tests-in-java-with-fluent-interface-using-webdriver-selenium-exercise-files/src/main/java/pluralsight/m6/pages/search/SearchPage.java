@@ -29,8 +29,8 @@ public class SearchPage {
         // hide it
     }
 
-    public static SearchPage getSearchPage(){
-        return new SearchPage(new SearchActController(),
+    public static SearchPage getSearchPage(){ //instance static to create SearchPages with acts and verifies
+        return new SearchPage(new SearchActController(), //this way we force to use act or verify
                               new SearchVerifyController(),
                               new SearchGetController());
     }

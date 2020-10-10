@@ -29,14 +29,14 @@ public class SearchTest extends BaseTestClass {
         home.act()
                 .search("Java");
 
-        search.act()
+        search.act() //this way we force to use act or verify
                 .filterBySkillLevel(SkillLevel.BEGINNER)
                 .filterByRole(Role.SOFTWARE_DEVELOPMENT)
                 .selectTab(Tab.COURSES)
                 .selectCourse("Java Fundamentals: The Java Language");
 
 
-        course.verify()
+        course.verify() //this way we force to use act or verify
                .coursePreviewIsDisplayed()
                .freeTrialIsDisplayed();
 
@@ -57,7 +57,7 @@ public class SearchTest extends BaseTestClass {
                 .selectTab(Tab.COURSES);
 
 
-        assertThat(search.get().courses())
+        assertThat(search.get().courses()) //assertj library
                 .hasSize(25)
                 .containsOnlyOnce("Java Fundamentals: The Java Language")
                 .doesNotContain("Python");
